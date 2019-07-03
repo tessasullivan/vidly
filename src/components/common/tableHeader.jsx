@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-
+import React, { Component } from "react";
 
 // columns: array
 // sortColumn: object
@@ -18,11 +17,10 @@ class TableHeader extends Component {
   };
 
   renderSortIcon = column => {
-
-    const {sortColumn } = this.props;
+    const { sortColumn } = this.props;
     if (column.path !== sortColumn.path) return null;
-    if (sortColumn.order === 'asc') return <i className="fa fa-sort-asc"> </i>
-    return <i className="fa fa-sort-desc"></i>;
+    if (sortColumn.order === "asc") return <i className="fa fa-sort-asc"> </i>;
+    return <i className="fa fa-sort-desc" />;
   };
 
   render() {
@@ -33,7 +31,7 @@ class TableHeader extends Component {
             <th
               key={column.path || column.key}
               onClick={() => this.raiseSort(column.path)}
-              style={{ cursor: "pointer" }}
+              className="clickable"
             >
               {column.label} {this.renderSortIcon(column)}
             </th>
