@@ -3,7 +3,7 @@ import _ from "lodash";
 
 const Pagination = props => {
   const { itemsCount, pageSize, onPageChange, currentPage } = props;
-  const pagesCount = Math.ceil(itemsCount / pageSize); 
+  const pagesCount = Math.ceil(itemsCount / pageSize);
 
   if (pagesCount === 1) return null;
   const pages = _.range(1, pagesCount + 1);
@@ -11,9 +11,16 @@ const Pagination = props => {
   return (
     <nav>
       <ul className="pagination">
+        {/* eslint-disable */}
         {pages.map(page => (
-          <li className={ page === currentPage ? "page-item active" :"page-item"} key={page}>
-            <a className="page-link" onClick={() => onPageChange(page)}>{page}</a> 
+          <li
+            className={page === currentPage ? "page-item active" : "page-item"}
+            key={page}
+          >
+            <a className="page-link" onClick={() => onPageChange(page)}>
+              {page}
+            </a>
+          {/* eslint-enable */}
           </li>
         ))}
       </ul>
