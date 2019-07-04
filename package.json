@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "add": "^2.0.6",
     "bootstrap": "^4.1.1",
     "font-awesome": "^4.7.0",
+    "git": "^0.1.5",
     "lodash": "^4.17.10",
     "prop-types": "^15.6.2",
+    "query-string": "^6.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "3.0.1"
   },
   "scripts": {
